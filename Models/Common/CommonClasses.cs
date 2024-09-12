@@ -62,14 +62,6 @@
     {
         public string? BatchStatus { get; set; }
     }
-
-    public class ClintBatchRequest
-    {
-        public int? BatchID { get; set; }
-    }
-
-
-
     public class workYears
     {
         public int? workyear { get; set; }

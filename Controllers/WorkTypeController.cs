@@ -21,12 +21,12 @@ namespace TMT_Code_Migration1.Controllers
             _workTypeDL = new WorkTypeDL(commonDl, configuration);
             _configuration = configuration;
         }
-        [Route("GetWorkTypeData")]
+        [Route("GetWorkTypeData/{taskId}")]
         [HttpGet]
         [Authorize]
-        public IActionResult GetWorkTypeData()
+        public IActionResult GetWorkTypeData(int taskId)
         {
-            List<WorkTypeData> workTypeDatas = _workTypeDL.GetWorkTypeData();
+            List<WorkTypeData> workTypeDatas = _workTypeDL.GetWorkTypeData(taskId);
             return Ok(workTypeDatas);
         }
         [Route("GetWorkTypeById/{wvalue}")]
